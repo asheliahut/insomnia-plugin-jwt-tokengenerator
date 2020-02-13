@@ -26,14 +26,8 @@ module.exports.templateTags = [{
       'email': _email,
       'password': _password,
     }
-    let token = ''
-    await axios.post(url, JSON.stringify(data))
-      .then((response) => {
-        token = response.data.token
-        return token
-    })
+    const res = await axios.post(url, JSON.stringify(data));
 
-    return token
-
+    return res.data.data.token;
   }
 }]
