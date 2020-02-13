@@ -11,8 +11,8 @@ module.exports.templateTags = [{
       type: 'string',
     },
     {
-      displayName: 'email',
-      description: 'email',
+      displayName: '_email',
+      description: '_email',
       type: 'string',
     },
     {
@@ -21,13 +21,13 @@ module.exports.templateTags = [{
       type: 'string',
     },
   ],
-  async run (context, url, email, _password) {
+  async run (context, url, _email, _password) {
     const data = {
-      'email': email,
+      'email': _email,
       'password': _password,
     }
     let token = ''
-    await axios.post(url, data)
+    await axios.post(url, JSON.stringify(data))
       .then((response) => {
         token = response.data.token
         return token
