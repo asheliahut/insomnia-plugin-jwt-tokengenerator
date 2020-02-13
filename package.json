@@ -1,0 +1,37 @@
+{
+  "name": "@asheliahut/insomnia-plugin-jwt-tokengenerator",
+  "description": "Generates a JWT token inside the Insomnia REST client",
+  "authors": [
+    {
+      "name": "Alvarium.io",
+      "url": "https://alvarium.io"
+    },
+    {
+      "name": "Ashley Hutson"
+    }
+  ],
+  "license": "MIT",
+  "version": "1.0.3",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:asheliahut/insomnia-plugin-jwt-tokengenerator.git"
+  },
+  "homepage": "https://github.com/asheliahut/insomnia-plugin-jwt-tokengenerator",
+  "main": "jwtTokenGenerator.js",
+  "insomnia": {
+    "name": "JWT Token Generator",
+    "description": "Generate a JWT token"
+  },
+  "dependencies": {
+    "axios": "^0.19.2"
+  },
+  "keywords": [
+    "insomnia",
+    "plugin",
+    "plugins",
+    "token",
+    "jwt",
+    "generator"
+  ]
+}
